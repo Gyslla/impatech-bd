@@ -3,55 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Banco de Dados - IMPA Tech</title>
+<title>Banco de Dados — IMPA Tech</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; background: #f0ede6; color: #121212; }
-header { background: #fff; padding: 20px 48px; border-bottom: 1px solid #e0ddd6; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f0ede6; color: #121212; min-height: 100vh; }
+header { background: #fff; padding: 20px 48px; border-bottom: 1px solid #e0ddd6; display: flex; align-items: center; gap: 12px; }
 header .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
-main { max-width: 800px; margin: 64px auto; padding: 0 24px 80px; }
-.badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 32px; }
+header .sep { width: 1px; height: 26px; background: #ddd; }
+header .sub { font-size: 13px; color: #666; }
+main { max-width: 800px; margin: 60px auto; padding: 0 24px 80px; }
+a.back { display: inline-flex; align-items: center; gap: 6px; color: #555; font-size: 14px; text-decoration: none; margin-bottom: 36px; }
+a.back:hover { color: #121212; }
+.badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; }
 .badge-mc { background: #f5c842; border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 700; }
-h1 { font-size: 42px; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
-.meta { font-size: 14px; color: #666; margin-bottom: 40px; display: flex; gap: 12px; flex-wrap: wrap; }
-.meta span { background: #e8e4db; border-radius: 4px; padding: 3px 10px; }
-.ementa { font-size: 16px; line-height: 1.8; margin-bottom: 48px; }
+.badge-label { font-size: 13px; font-weight: 500; }
+h1 { font-size: 40px; font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+.meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.meta span { background: #e8e4db; border-radius: 4px; padding: 3px 10px; font-size: 13px; color: #555; }
+.ementa { font-size: 16px; line-height: 1.8; color: #222; margin-bottom: 48px; }
 .biblio { background: #fff; border-radius: 16px; padding: 32px; }
-.biblio h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 14px; }
+.biblio h2 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #999; margin-bottom: 16px; }
 .biblio ol { padding-left: 20px; }
-.biblio li { font-size: 15px; line-height: 1.6; margin-bottom: 10px; }
+.biblio li { font-size: 15px; line-height: 1.65; margin-bottom: 10px; color: #333; }
 .biblio li em { font-style: italic; }
-.sep { height: 1px; background: #e8e4db; margin: 24px 0; }
-a.back { display: inline-block; color: #555; font-size: 14px; text-decoration: none; margin-bottom: 40px; }
-footer { text-align: center; font-size: 12px; color: #aaa; padding: 24px; }
+.sep2 { height: 1px; background: #eeebe3; margin: 28px 0; }
+footer { text-align: center; font-size: 12px; color: #bbb; padding: 32px 0; }
+footer a { color: #bbb; }
 </style>
 </head>
 <body>
-<header><div class="logo">impatech</div></header>
+<header>
+  <span class="logo">impatech</span>
+  <div class="sep"></div>
+  <span class="sub">Grade Curricular e Ementas</span>
+</header>
 <main>
-<a class="back" href="https://impatech.edu.br/academico/grade-curricular/">&larr; Ver grade completa</a>
-<div class="badge"><span class="badge-mc">MC</span> Enfase em Ciencia da Computacao</div>
-<h1>Banco de Dados</h1>
-<div class="meta"><span>54 horas</span><span>Ano 2 &middot; Periodo 2.3</span><span>Codigo MC 24</span></div>
-<p class="ementa">Introducao a sistemas de banco de dados; projeto de banco de dados; modelo de dados relacional; modelo conceitual de entidades e relacionamentos, e UML; dependencias funcionais e normalizacao; linguagens de definicao e de manipulacao de dados; algebra relacional e SQL; consultas em dados relacionais; restricoes de integridade; recursos avancados em SQL; organizacao fisica de bancos de dados: tecnicas de armazenamento e indexacao; Big data: definicao, caracteristicas e exemplos de dominios de aplicacao; evolucao dos requisitos de gerenciamento de dados e dos modelos de bancos de dados; bancos de dados NoSQL; bancos de dados NewSQL; bancos de dados em memoria.</p>
-<div class="biblio">
-<h2>Bibliografia basica</h2>
-<ol>
-<li>LMASRI, R.; NAVATHE, S. B. <em>Sistemas de Banco de Dados</em>. 7. ed. Sao Paulo: PEARSON, 2019.</li>
-<li>HEUSER, C. A. <em>Projeto de Banco de Dados</em>. 6. ed. Bookman: Porto Alegre, 2009.</li>
-<li>SILBERSCHATZ, A.; KORTH, H. F.; SUDARSHAN, S. <em>Sistemas de Banco de Dados</em>. 7. ed. Rio de Janeiro: Grupo Gen-LTC, 2020.</li>
-</ol>
-<div class="sep"></div>
-<h2>Bibliografia complementar</h2>
-<ol>
-<li>HELLERSTEIN, J.; STONEBRAKER, M. <em>Readings in Database Systems</em>. 4. ed. MIT Press, 2005.</li>
-<li>RAGHU, R.; GEHRKE, J. <em>Database Management Systems</em>. 3. ed. McGraw-Hill, 2002.</li>
-<li>GARCIA-MOLINA, H.; ULLMAN, J. D.; WIDOM, J. <em>Database systems: the complete book</em>. 2. ed. Pearson, 2008.</li>
-<li>REDMOND, E.; WILSON, J. R. <em>Seven Databases in Seven Weeks</em>. Pragmatic Bookshelf, 2012.</li>
-<li>ROSS, M.; KIMBALL, R. <em>The Data Warehouse Toolkit</em>. 3. ed. Wiley, 2013.</li>
-</ol>
-</div>
+  <a class="back" href="https://impatech.edu.br/academico/grade-curricular/">← Ver grade completa</a>
+  <div class="badge">
+    <span class="badge-mc">MC</span>
+    <span class="badge-label">Ênfase em Ciência da Computação</span>
+  </div>
+  <h1>Banco de Dados</h1>
+  <div class="meta">
+    <span>54 horas</span>
+    <span>Ano 2 &middot; Período 2.3</span>
+    <span>Código-MC 24</span>
+  </div>
+  <p class="ementa">
+    Introdução a sistemas de banco de dados; projeto de banco de dados; modelo de dados relacional; modelo conceitual de entidades e relacionamentos, e UML; dependências funcionais e normalização; linguagens de definição e de manipulação de dados; álgebra relacional e SQL; consultas em dados relacionais; restrições de integridade; recursos avançados em SQL; organização física de bancos de dados: técnicas de armazenamento e indexação; Big data: definição, características e exemplos de domínios de aplicação; evolução dos requisitos de gerenciamento de dados e dos modelos de bancos de dados; bancos de dados NoSQL; bancos de dados NewSQL; Bancos de dados em memória. Organização física de bancos de dados: técnicas de armazenamento e indexação; Big data: definição, características e exemplos de domínios de aplicação; evolução dos requisitos de gerenciamento de dados e dos modelos de bancos de dados; bancos de dados NoSQL; bancos de dados NewSQL.
+  </p>
+  <div class="biblio">
+    <h2>Bibliografia básica</h2>
+    <ol>
+      <li>LMASRI, R.; NAVATHE, S. B. <em>Sistemas de Banco de Dados</em>. 7. ed. São Paulo: PEARSON, 2019.</li>
+      <li>HEUSER, C. A. <em>Projeto de Banco de Dados</em>. 6. ed. Bookman: Porto Alegre, 2009.</li>
+      <li>SILBERSCHATZ, A.; KORTH, H. F.; SUDARSHAN, S. <em>Sistemas de Banco de Dados</em>. 7. ed. Rio de Janeiro: Grupo Gen-LTC, 2020.</li>
+    </ol>
+    <div class="sep2"></div>
+    <h2>Bibliografia complementar</h2>
+    <ol>
+      <li>HELLERSTEIN, J.; STONEBRAKER, M. <em>Readings in Database Systems</em>. 4. ed. New York: MIT Press, 2005.</li>
+      <li>RAGHU, R.; GEHRKE, J. <em>Database Management Systems</em>. 3. ed. New York: McGraw-Hill, 2002.</li>
+      <li>GARCIA-MOLINA, H.; ULLMAN, J. D.; WIDOM, J. <em>Database systems: the complete book</em>. 2. ed. Boston: Pearson Education, 2008.</li>
+      <li>REDMOND, E.; WILSON, J. R. <em>Seven Databases in Seven Weeks: A Guide to Modern Databases and the NoSQL Movement</em>. EUA: Pragmatic Bookshelf, 2012.</li>
+      <li>ROSS, M.; KIMBALL, R. <em>The Data Warehouse Toolkit</em>. 3. ed. New York: Wiley, 2013.</li>
+    </ol>
+  </div>
 </main>
-<footer>Fonte: <a href="https://impatech.edu.br/academico/grade-curricular/" style="color:#aaa">impatech.edu.br</a></footer>
+<footer>Fonte: <a href="https://impatech.edu.br/academico/grade-curricular/">impatech.edu.br</a></footer>
 </body>
 </html>
